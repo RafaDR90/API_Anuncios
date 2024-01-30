@@ -1,0 +1,28 @@
+{
+    "name": "yes/api-anuncios",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "anuncios\\": "src/",
+            "controllers\\": "src/controllers/",
+            "services\\": "src/services/",
+            "repositoris\\": "src/repositoris/",
+            "models\\": "src/models/",
+            "lib\\": "src/lib/",
+            "routes\\": "src/routes/",
+            "utils\\": "src/utils/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RafaelDR",
+            "email": "rafa18220delgado@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "firebase/php-jwt": "^6.10",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
