@@ -3,7 +3,7 @@ namespace routes;
 
 use lib\ResponseHttp,
     lib\Security,
-    controllers\AuthController,
+    controllers\AnuncioController,
     controllers\UsuarioController,
     lib\Pages;
 
@@ -22,6 +22,7 @@ class Routes{
 
     // CREO CONTROLADORES
     $usuarioController=new UsuarioController();
+    $anuncioController=new AnuncioController();
 
     // PAGINA PRINCIPAL
     $router->get(self::PATH, function () {
@@ -55,6 +56,15 @@ class Routes{
         $router->get(self::PATH.'/vista-token',function(){
             $pages=new Pages();
             $pages->render('usuario/TokenView');
+        });
+
+    //ANUNCIOS CRUD
+        //CREAR
+        $router->post(self::PATH.'/crea-anuncio', function () use ($anuncioController){
+            $anuncioController->creaAnuncio();
+        });
+        $router->delete(self::PATH.'/borra-anuncio', function () use ($anuncioController){
+            $anuncioController->borraAnuncio();
         });
 
 
