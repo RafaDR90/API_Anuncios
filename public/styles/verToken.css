@@ -1,0 +1,37 @@
+.verToken {
+
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.verToken p {
+    color: #333; /* Texto negro */
+    margin-bottom: 15px;
+}
+
+.verToken code {
+    display: block;
+    padding: 10px;
+    background-color: #f8f8f8; /* Fondo gris claro */
+    color: #333; /* Texto negro */
+    border-radius: 3px;
+    overflow: auto; /* Evitar que el token se salga del margen */
+}
+
+.verToken a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #333; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.verToken a:hover {
+    background-color: #555; /* Fondo gris oscuro al pasar el ratón sobre el enlace */
+}

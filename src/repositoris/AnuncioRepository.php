@@ -63,4 +63,38 @@ class AnuncioRepository
             $this->db->cierraConexion();
         }
     }
+
+    public function actualizaAnuncio(Anuncio $anuncio)
+    {
+        try {
+            $update = $this->db->prepara("UPDATE anuncio SET titulo=:titulo, descripcion=:descripcion, precio=:precio, img_url=:img_url WHERE id=:id");
+            $update->bindValue(':titulo', $anuncio->getTitulo());
+            $update->bindValue(':descripcion', $anuncio->getDescripcion());
+            $update->bindValue(':precio', $anuncio->getPrecio());
+            $update->bindValue(':img_url', $anuncio->getImgUrl());
+            $update->bindValue(':id', $anuncio->getId());
+            $update->execute();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        } finally {
+            $update->closeCursor();
+            $this->db->cierraConexion();
+        }
+    }
+
+    public function getAnuncios()
+    {
+        try {
+            $consulta = $this->db->prepara("SELECT * FROM anuncio");
+            $consulta->execute();
+            $anuncios = $consulta->fetchAll(PDO::FETCH_ASSOC);
+            return $anuncios;
+        } catch (PDOException $e) {
+            return false;
+        } finally {
+            $consulta->closeCursor();
+            $this->db->cierraConexion();
+        }
+    }
 }

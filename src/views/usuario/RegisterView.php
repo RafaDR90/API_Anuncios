@@ -1,4 +1,4 @@
-<div>
+<div class="formulario">
     <h2>Registrate</h2>
     <form action="<?=BASE_URL?>registro" method="post">
         <label for="email">Email</label>

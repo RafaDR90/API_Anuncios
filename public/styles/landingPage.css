@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Fondo gris claro */
+    color: #333; /* Texto negro */
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.titulo__container h1 {
+    color: #333; /* Texto negro */
+}
+
+.que-es-cursoapi h2 {
+    color: #333; /* Texto negro */
+    border-bottom: 1px solid #ddd; /* Línea gris claro debajo del encabezado */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.informacion h2 {
+    color: #333; /* Texto negro */
+    margin-top: 20px;
+}
+
+.texto {
+    color: #333; /* Texto negro */
+}
+
+.ejemplo {
+    color: #333; /* Texto negro */
+    font-weight: bold;
+}
+
+span {
+    color: #555; /* Texto gris oscuro */
+}
+
+/* Estilo para enlaces */
+
+
+
+.ejemplo {
+    color: #333; /* Texto negro */
+    font-weight: bold;
+    word-wrap: break-word; /* Evitar que el texto desborde */
+}

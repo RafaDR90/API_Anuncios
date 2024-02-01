@@ -5,7 +5,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tienda</title>
+    <title>API Anuncios</title>
+    <link rel="stylesheet" href="<?=BASE_URL?>public/styles/landingPage.css">
+    <link rel="stylesheet" href="<?=BASE_URL?>public/styles/header.css">
+    <link rel="stylesheet" href="<?=BASE_URL?>public/styles/registerYLogin.css">
+    <link rel="stylesheet" href="<?=BASE_URL?>public/styles/verToken.css">
 </head>
 <body>
 <header>

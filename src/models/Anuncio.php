@@ -26,6 +26,12 @@ class Anuncio
 
     public function validaAnuncio()
     {
+        if (isset($this->id)){
+            $this->setId(ValidationUtils::SVNumero($this->getId()));
+            if (!isset($this->id)){
+                return ['error'=>'El id no es un numero'];
+            }
+        }
         $this->setTitulo(ValidationUtils::sanidarStringFiltro($this->getTitulo()));
         $this->setDescripcion(ValidationUtils::sanidarStringFiltro($this->getDescripcion()));
         $this->setImgUrl(ValidationUtils::sanidarStringFiltro($this->getImgUrl()));

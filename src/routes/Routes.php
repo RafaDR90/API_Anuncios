@@ -63,35 +63,29 @@ class Routes{
         $router->post(self::PATH.'/crea-anuncio', function () use ($anuncioController){
             $anuncioController->creaAnuncio();
         });
+        //BORRAR
         $router->delete(self::PATH.'/borra-anuncio', function () use ($anuncioController){
             $anuncioController->borraAnuncio();
         });
-
+        //ACTUALIZAR
+        $router->put(self::PATH.'/actualiza-anuncio', function () use ($anuncioController){
+            $anuncioController->actualizaAnuncio();
+        });
+        //LISTAR
+        $router->get(self::PATH.'/lista-anuncios', function () use ($anuncioController){
+            $anuncioController->listaAnuncios();
+        });
 
 
     // LA PAGINA NO SE ENCUENTRA
         $router->any('/404', function (){
-            die("rutanoexiste");
             header('Location: ' . self::PATH . '/error');
             });
         $router->get(self::PATH.'/error', function (){
             ResponseHttp::statusMessage(404, "La pagina no se encuentra");
             });
 
-        // PRUEBAS
-        $router->get(self::PATH.'/pruebaauth', function (){
-            echo Security::encryptPassword("Rafa");
-            });
-        $router->get(self::PATH.'/pruebavalidacion', function (){
-            echo Security::validatePassword("Rafa", '$2y$10$As1arMFfOxIqsNk/edHNKOw/YD4DhrGYjKd834O1DJhGEBTjOS7P2');
-        });
-        $router->get(self::PATH.'/pruebakey', function (){
-            echo Security::claveSecreta();
-        });
 
-        $router->get(self::PATH.'/pruebatoken', function (){
-            echo Security::createToken(Security::claveSecreta(), ["nombre"=>"Rafa", "apellido"=>"Garcia","email"=>"rafa@rafa.com"]);
-        });
 
         $router->resolve();
         }

@@ -7,11 +7,15 @@ if (!Utils::isLogued()){
     exit();
 }
 ?>
-<div>
+<div class="verToken">
     <?php if (isset($token)):
     ?>
     <p>Usa este token desde tu proyecto para poder hacer peticiones a la API:</p>
-    <p><b>Bearer <?=$token?></b></p>
+    <pre>
+        <code>
+            Bearer <?=$token?>
+        </code>
+    </pre>
     <?php else:?>
     <p>Pulsa para crear un nuevo token</p>
     <?php endif;?>

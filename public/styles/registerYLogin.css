@@ -1,0 +1,40 @@
+.formulario {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 5px;
+}
+
+.formulario h2 {
+    color: #333; /* Texto negro */
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-top: 10px;
+    color: #333; /* Texto negro */
+}
+
+.formulario input {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 3px;
+}
+
+.formulario input[type="submit"] {
+    background-color: black;
+    color: #fff; /* Texto blanco */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #252525;
+}
